@@ -37,7 +37,9 @@ Make sure "Monitor" is set to "In" on the Bridge's track to enable audio output 
 ![Ableton Live VCV Bridge](images/BridgeLive.png)
 
 ### Cubase
-TODO
+In Cubase add a Track/Rack instrument in the VST Panel. If you make a rack instrument, select "Yes" when it asks if you want to create a MIDI channel for the rack instrument. Select VCV-Bridge-64 as the VST Instrument. 
+
+In the track inspector, select the midi input of your choice (your controller keyboard for example) and the output as the VCV Bridge 64 VST you just created. Set channel 1. In VCV Rack, create a MIDI module. Set the MIDI Driver to "Bridge." Set the Port to 1. Set the channel to 1. Send the CV and Gate to an OSC-type module's trigger/gate and V/Oct input, respectively. Set the OSC's output(s) to a Core Audio module. In the Core Audio module, set the Audio Driver to "Bridge." Set the port number to 1.
 
 ### FL Studio
 In FL Studio Add a "VCV-Bridge" Channel. Inside Channel settings, navigate to Processing tab and check "Make bridged" and "Use fixed size buffers" (this is to be fixed sooner or later). For each output in VCV you will need separate Channel listening to separate port, as there's no option to handle many Wrapper inputs in FL Studio. 
