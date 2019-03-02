@@ -37,11 +37,11 @@ Make sure "Monitor" is set to "In" on the Bridge's track to enable audio output 
 ![Ableton Live VCV Bridge](images/BridgeLive.png)
 
 ### Cubase
-In Cubase add a Track/Rack instrument in the VST Panel. If you make a rack instrument, select "Yes" when it asks if you want to create a MIDI channel for the rack instrument. Select VCV-Bridge-64 as the VST Instrument. 
+In Cubase add a Track/Rack instrument in the VST Panel. If you make a rack instrument, select "Yes" when it asks if you want to create a MIDI channel for the rack instrument. In the track inspector, select the midi input of your choice (your controller keyboard for example. In the screenshot below, I am using "2-Impulse" for MIDI input). Next, select VCV-Bridge-64 for the track's VST Instrument output, and pick channel 1 to send MIDI data on. In the timeline, I added a single measure sending four notes, set the transport to loop, and pressed play. 
 
 ![Cubase 9x VCV Bridge](images/CubaseVCVRackBridge1.png)
 
-In the track inspector, select the midi input of your choice (your controller keyboard for example) and the output as the VCV Bridge 64 VST you just created. Set channel 1. In VCV Rack, create a MIDI module. Set the MIDI Driver to "Bridge." Set the Port to 1. Set the channel to 1. Send the CV and Gate to an OSC-type module's trigger/gate and V/Oct input, respectively. Set the OSC's output(s) to a Core Audio module. In the Core Audio module, set the Audio Driver to "Bridge." Set the port number to 1.
+ Switching to VCV Rack, create a MIDI module. Set the MIDI Driver to "Bridge." Set the Port to 1. Set the channel to 1. Send the CV and Gate to an OSC-type module's trigger/gate and V/Oct input, respectively. Set the OSC's output(s) to a Core Audio module. In the Core Audio module, set the Audio Driver to "Bridge." Set the port number to 1. You should now hear your MIDI loop playing your patch in VCV Rack through the defined output channel in Cubase.
 
 ![Cubase 9x Example Patch Settings in VCV Rack](images/CubaseVCVRackBridge2.png)
 
